@@ -1,0 +1,58 @@
+.home-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.list {
+  float: left;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 60px;
+  padding: 10px;
+  box-shadow: 0 0 3px #ccc;
+  margin-bottom: 20px;
+}
+
+.btn-success,
+.btn-danger,
+.btn-primary {
+  width: 107px;
+  margin-left: 15px;
+}
+.todo-date {
+  font-size: 13px;
+  margin-left: 10px;
+}
+.todo-title {
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.hz-ln {
+  margin-left: 10px;
+  margin-right: 0px;
+  border-right: 1px solid black;
+  min-height: 37px;
+  display: block;
+  float: right;
+}
+.edit-delete-box {
+  min-height: 60px;
+  float: right;
+  width: 10%;
+}
+.todo-list {
+  width: 60%;
+  margin: 0 auto;
+}
+.edit-todo,
+.delete-todo {
+  font-size: 22px;
+  position: relative;
+  top: 10px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.fa-trash-o:hover {
+  color: red;
+}
