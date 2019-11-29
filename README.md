@@ -1,4 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Dependencies - 
+
+Clone Backend repo also - 
+https://github.com/shailu26/akire-express
+
+Don't forget to run -
+
+npm i
 
 ## Available Scripts
 
