@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {environment} from '../../environment'
 import axios from '../../services/axios';
 import DatePicker from 'react-date-picker';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './todo.css';
 
@@ -95,7 +95,6 @@ class Todo extends Component {
 
                     </div>
                 </form>
-                <ToastContainer />
             </div>
 
         )

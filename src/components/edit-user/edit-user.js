@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from '../../services/axios';
 import './edit-user.css';
-import {ToastContainer, toast} from 'react-toastify';
+import {toast} from 'react-toastify';
 import {environment} from '../../environment'
 
 class EditUser extends Component {
@@ -129,7 +129,6 @@ class EditUser extends Component {
                                             >Update</button>}
                                       
                                     </form>
-                                    <ToastContainer></ToastContainer>
                                 </div>
                             </div>
                         </div>

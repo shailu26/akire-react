@@ -17,7 +17,9 @@ class Navbar extends Component {
     }
     signOut = () => {
         cookies.remove('token');
-        console.log(cookies.get('token'));
+        if (cookies.get('token')) {
+            cookies.remove('token');
+        }
         this
             .props
             .history

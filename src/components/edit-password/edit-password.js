@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from '../../services/axios';
 import './edit-password.css';
-import {ToastContainer, toast} from 'react-toastify';
+import {toast} from 'react-toastify';
 import {environment} from '../../environment'
 
 class EditUserPassword extends Component {
@@ -106,7 +106,6 @@ class EditUserPassword extends Component {
                                             onClick={this.handleUpdateClick}>Update</button>
 
                                     </form>
-                                    <ToastContainer></ToastContainer>
                                 </div>
                             </div>
                         </div>

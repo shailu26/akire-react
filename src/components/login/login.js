@@ -4,7 +4,7 @@ import axios from '../../services/axios';
 import Cookies from 'universal-cookie';
 import './login.css';
 import jwt from 'jsonwebtoken'
-import {ToastContainer, toast} from 'react-toastify';
+import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const cookies = new Cookies();
 
@@ -119,7 +119,6 @@ class Login extends Component {
                                         <div className="or-option">OR</div>
                                         <button className="btn btn-lg btn-primary btn-block text-uppercase" onClick={this.goToSignup}>Signup</button>
                                     </form>
-                                    <ToastContainer/>
                                 </div>
                             </div>
                         </div>

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {environment} from '../../environment'
 import axios from '../../services/axios';
 import './home.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const getTodoListByUser = () => {
     return axios.get(`${environment.baseUrl}/api/todo/getLoggedinUserTodo`);
@@ -118,7 +118,6 @@ class Home extends Component {
                                             </div>
                                         })}
                                 </div>
-                                <ToastContainer />
                             </div>
                         )
                         : <div className="text-center">

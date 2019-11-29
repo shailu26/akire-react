@@ -3,7 +3,7 @@ import {Redirect} from 'react-router-dom';
 import axios from '../../services/axios';
 import Cookies from 'universal-cookie';
 import './signup.css';
-import {ToastContainer, toast} from 'react-toastify';
+import { toast} from 'react-toastify';
 const cookies = new Cookies();
 
 class SignUp extends Component {
@@ -29,9 +29,10 @@ class SignUp extends Component {
                 .then((response) => {
                     toast.success('Successfully signed up :)', {position: toast.POSITION.BOTTOM_RIGHT});
                     this.setState({name: '', email: '', password: ''});
+                    this.forceUpdate();
                 })
                 .catch((error) => {
-                    toast.error('Email or Password does not exist', {position: toast.POSITION.BOTTOM_RIGHT});
+                    toast.error('Email is already exist', {position: toast.POSITION.BOTTOM_RIGHT});
                 });
         }
 
@@ -104,8 +105,7 @@ class SignUp extends Component {
                                                 className="form-control"
                                                 placeholder="* Email address"
                                                 onChange={this.handleEmailChange}
-                                                required
-                                                />
+                                                required/>
                                         </div>
 
                                         <div className="pd-bt-25">
@@ -117,19 +117,16 @@ class SignUp extends Component {
                                                 onChange={this.handlePasswordChange}
                                                 required/>
                                         </div>
-                                        {this.state.name && this.state.password && this.state.email ?  <button
-                                            className="btn btn-lg btn-primary btn-block text-uppercase"
-                                            type="submit"
-                                            onClick={this.handleSignupClick}>Signup</button>:
-                                             <button
-                                            className="btn btn-lg btn-dark btn-block text-uppercase"
-                                            type="submit"
-                                            >Signup</button>
+                                        {this.state.name && this.state.password && this.state.email
+                                            ? <button
+                                                    className="btn btn-lg btn-primary btn-block text-uppercase"
+                                                    type="submit"
+                                                    onClick={this.handleSignupClick}>Signup</button>
+                                            : <button className="btn btn-lg btn-dark btn-block text-uppercase" type="submit">Signup</button>
                                         }
-                                       
 
                                     </form>
-                                    <ToastContainer></ToastContainer>
+                                    
                                 </div>
                             </div>
                         </div>
